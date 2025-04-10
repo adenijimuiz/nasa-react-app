@@ -60,7 +60,7 @@
   flex-direction: column;
   gap: 1rem;
   padding: 1rem;
-  /* overflow-y: scroll; */
+  overflow-y: scroll;
   height: 100%;
   width: 80%;
   max-width: 800px;
@@ -68,8 +68,24 @@
   background: #030615;
 }
 
+.sidebarContents h2{
+  font-weight: 200;
+  font-size: 1.4rem;
+}
+
 .sidebarContents div{
   flex: 1;
+}
+
+.descriptionContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.descriptionTitle{
+  font-size: 1.1rem;
+  font-weight: 200;
 }
 
 .sidebarContents button{
@@ -80,7 +96,7 @@
   margin-right: auto;
   cursor: pointer;
   transition-duration: 200ms;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 .sidebarContents button:hover{
@@ -101,6 +117,7 @@ footer{
 footer div{
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
 }
 
 footer h2{
@@ -135,6 +152,28 @@ footer button:hover{
   inset: 0;
   z-index: -1;
   background: linear-gradient(to top, #030615, rgba(255, 255, 255, 0));
+}
+
+.loadingStage{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.loadingStage i{
+  opacity: 0.2;
+  font-size: 3rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from{
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(360deg);
+  }
 }
 
 @media (min-width: 640px) {
