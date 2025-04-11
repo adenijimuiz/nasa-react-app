@@ -14,7 +14,7 @@ function App() {
       const NASA_KEY = import.meta.env.VITE_NASA_API_KEY;
       const url = 'https://api.nasa.gov/planetary/apod' + `?api_key=${NASA_KEY}`;
 
-      const today = (new Date()).toDateString();
+      const today = (new Date()).toDateString().slice(0, 10);
       const localKey = `NASA-${today}`
       if (localStorage.getItem(localKey)) {
         const apiData = JSON.parse(localStorage.getItem(localKey));
